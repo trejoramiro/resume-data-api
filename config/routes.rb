@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get '/education/:student_id/:id' => 'educations#show' 
       get '/students' => 'students#index'
       get '/students/:id' => 'students#show'
-      get '/experience' => 'experience#index'           
+      get '/experience' => 'experiences#index'           
     end
   end
 end

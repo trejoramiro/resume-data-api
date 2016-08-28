@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get '/experience' => 'experience#index'
 
       get 'skills' => 'skills#index'
+      get '/experience' => 'experiences#index'           
     end
   end
 end

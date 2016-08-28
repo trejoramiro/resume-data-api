@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
   namespace :v1 do
     get '/education' => 'educations#index'
+    get '/education/:id' => 'educations#show'
   end
   end
 end

@@ -9,5 +9,8 @@ Rails.application.routes.draw do
       get '/students' => 'students#index'
       get '/students/:id' => 'students#show'
     end
+    namespace :v1 do
+      get '/experience' => 'experience#index'
+    end
   end
 end

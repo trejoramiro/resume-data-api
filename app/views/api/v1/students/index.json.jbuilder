@@ -1,1 +1,12 @@
-json.message "Hi!"
+json.firstName student.first_name
+json.lastName student.last_name
+json.email student.email
+json.password student.password
+json.phoneNumber student.phone_number
+json.bio student.bio
+json.linkedInUrl student.linked_in_url
+json.twitterHandle student.twitter_handle
+json.personalUrl student.personal_url
+json.resumeUrl student.resume_url
+json.githubUrl student.github_url
+json.photo student.photo

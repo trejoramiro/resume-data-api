@@ -22,7 +22,7 @@ class Api::V1::EducationsController < ApplicationController
     if @education.save
       render json: { status: :ok, message: 'Succesffuly created' }.to_json
     else
-      render json: { status: :error, message: 'error' }.to_json
+      render json: { status: :error, message: 'Error' }.to_json
     end
   end
 end

@@ -5,17 +5,16 @@ Rails.application.routes.draw do
       get '/students' => 'students#index'
       get '/students/:id' => 'students#show'
 
-      get '/education/:student_id' => 'educations#index'
-      get '/education/:student_id/:id' => 'educations#show' 
+      get '/students/:student_id/education' => 'educations#index'
+      get '/students/:student_id/education/:id' => 'educations#show' 
 
-      get '/experience' => 'experience#index'
+      get '/students/:student_id/experiences' => 'experiences#index'
+      get '/students/:student_id/experiences/:id' => 'experiences#show'
 
-      get '/skills/:student_id' => 'skills#index'
-      get '/skills/:student_id/:id' => 'skills#show'
-
-      get '/experience' => 'experiences#index'           
+      get '/students/:student_id/skills' => 'skills#index'
+      get '/students/:student_id/skills/:id' => 'skills#show'
     end
   end
 end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

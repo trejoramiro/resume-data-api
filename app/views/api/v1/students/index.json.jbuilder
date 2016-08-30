@@ -1,4 +1,5 @@
 json.array! @students do |student|
+  json.id student.id
   json.firstName student.first_name
   json.lastName student.last_name
   json.email student.email

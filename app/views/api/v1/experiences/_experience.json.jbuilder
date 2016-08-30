@@ -1,4 +1,5 @@
-json.experienceId experience.id
+json.id experience.id
+json.studentID experience.student.id
 json.startDate experience.start_date
 json.endDate experience.end_date
 json.jobTitle experience.job_title

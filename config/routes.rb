@@ -5,13 +5,14 @@ Rails.application.routes.draw do
       get '/students' => 'students#index'
       get '/students/:id' => 'students#show'
 
-      get '/education/:student_id' => 'educations#index'
-      get '/education/:student_id/:id' => 'educations#show' 
+      get '/students/:student_id/education' => 'educations#index'
+      get '/students/:student_id/education/:id' => 'educations#show' 
 
-      get '/experience/:student_id' => 'experiences#index'
-      get '/experience/:student_id/:id' => 'experiences#show'
+      get '/students/:student_id/experiences' => 'experiences#index'
+      get '/students/:student_id/experiences/:id' => 'experiences#show'
 
       get 'skills' => 'skills#index'
+      get 'skills/:id' => 'skills#show'
     end
   end
 end

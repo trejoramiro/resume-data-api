@@ -25,4 +25,10 @@ class Api::V1::EducationsController < ApplicationController
       render json: { status: :error, message: 'Error' }.to_json
     end
   end
+
+  def update
+  end
+
+  def delete
+  end
 end

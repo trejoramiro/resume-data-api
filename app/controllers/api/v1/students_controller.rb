@@ -46,5 +46,8 @@ class Api::V1::StudentsController < ApplicationController
   end
 
   def destroy
+    @student = Student.find_by(id: params[:id])
+    @student.destroy
+    render json: {message: "Successfully destroyed, catptain ;)"}
   end
 end

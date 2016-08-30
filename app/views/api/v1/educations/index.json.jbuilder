@@ -1,5 +1,5 @@
-json.studentId @student.id
-json.education @education.each do |education|
+json.array! @education.each do |education|
+  json.studentId education.student.id
   json.educationId education.id
   json.startDate education.start_date
   json.endDate education.end_date

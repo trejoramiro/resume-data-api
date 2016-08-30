@@ -1,10 +1,6 @@
 class Api::V1::EducationsController < ApplicationController
   def index
-    # @student = Student.find_by(params[:student_id])
-    @student = Student.find_by(id: params[:student_id])
-    all_education = Education.find_by(student_id: @student.id)
-    @education = []
-    @education.push(all_education)
+    @education = Education.where(student_id: params[:student_id])
     render 'index.json.jbuilder'
   end
 

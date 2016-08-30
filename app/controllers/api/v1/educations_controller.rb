@@ -1,3 +1,4 @@
+# Educations Controller #
 class Api::V1::EducationsController < ApplicationController
   def index
     @education = Education.where(student_id: params[:student_id])
@@ -5,7 +6,8 @@ class Api::V1::EducationsController < ApplicationController
   end
 
   def show
-    @education = Education.find_by(id: params[:id], student_id: params[:student_id])
+    @education = Education.find_by(id: params[:id],
+                                   student_id: params[:student_id])
     render 'show.json.jbuilder'
   end
 
@@ -17,8 +19,10 @@ class Api::V1::EducationsController < ApplicationController
       university_name: params[:university],
       details: params[:details],
       student_id: params[:student_id])
-    render json: { status: :ok,
-        message: "Succesffuly created"}.to_json
+    if @education.save
+      render json: { status: :ok, message: 'Succesffuly created' }.to_json
+    else
+      render json: { status: :error, message: 'error' }.to_json
+    end
   end
-  
 end

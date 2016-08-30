@@ -9,13 +9,7 @@ class Api::V1::EducationsController < ApplicationController
   end
 
   def show
-    @student = Student.find_by(id: params[:student_id])
-    @educations = @student.educations
-    @educations.each do |education|
-      if education.id.to_s == params[:id]
-        @education = education
-      end
-    end
+    @education = Education.find_by(id: params[:id], student_id: params[:student_id])
     # @education = Education.find_by(id: params[:id])
     render 'show.json.jbuilder'
   end

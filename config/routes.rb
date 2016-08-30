@@ -8,10 +8,10 @@ Rails.application.routes.draw do
       get '/education/:student_id' => 'educations#index'
       get '/education/:student_id/:id' => 'educations#show' 
 
-      get '/experience' => 'experiences#index'
+      get '/experience/:student_id' => 'experiences#index'
+      get '/experience/:student_id/:id' => 'experiences#show'
 
       get 'skills' => 'skills#index'
-      get '/experience' => 'experiences#index'           
     end
   end
 end

@@ -10,7 +10,6 @@ class Api::V1::EducationsController < ApplicationController
 
   def show
     @education = Education.find_by(id: params[:id], student_id: params[:student_id])
-    # @education = Education.find_by(id: params[:id])
     render 'show.json.jbuilder'
   end
 end

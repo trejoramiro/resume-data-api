@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20160828165237) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "api_v1_students", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -33,10 +32,7 @@ ActiveRecord::Schema.define(version: 20160828165237) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "education", force: :cascade do |t|
-=======
   create_table "educations", force: :cascade do |t|
->>>>>>> f501fa1436b5c7bfde219a519094967fef77a9c0
     t.date     "start_date"
     t.date     "end_date"
     t.string   "degree"

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       get '/experience' => 'experience#index'
 
       get 'skills' => 'skills#index'
+      get 'skills/:id' => 'skills#show'
+
       get '/experience' => 'experiences#index'           
     end
   end

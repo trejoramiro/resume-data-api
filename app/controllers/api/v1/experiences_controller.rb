@@ -5,7 +5,7 @@ class Api::V1::ExperiencesController < ApplicationController
     # @experiences = Experience.where(student_id: params[:student_id])
     # @experience.push(@experiences)
     @experiences = Experience.where(student_id: params[:student_id])
-    
+
     render 'index.json.jbuilder'
   end
 

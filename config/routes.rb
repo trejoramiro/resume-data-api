@@ -8,8 +8,8 @@ Rails.application.routes.draw do
       get '/students/:student_id/education' => 'educations#index'
       get '/students/:student_id/education/:id' => 'educations#show'
       post '/students/:student_id/education' => 'educations#create'
-      patch '/students/:student_id/education' => 'educations#update'
-      delete '/students/:student_id/education' => 'educations#delete'
+      patch '/students/education/:id' => 'educations#update'
+      delete '/students/education/:id' => 'educations#destroy'
 
 
       get '/students/:student_id/experiences' => 'experiences#index'

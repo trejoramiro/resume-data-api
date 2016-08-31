@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
       get '/students/:student_id/skills' => 'skills#index'
       get '/students/:student_id/skills/:id' => 'skills#show'
+      post '/students/:student_id/skills' => 'skills#create'
+      patch '/students/:student_id/skills/:id' => 'skills#update'
+      delete '/students/:student_id/skills' => 'skills#destroy'
     end
   end
 end

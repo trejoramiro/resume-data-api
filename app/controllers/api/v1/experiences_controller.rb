@@ -25,12 +25,12 @@ class Api::V1::ExperiencesController < ApplicationController
 
   def update
     @experience = Experience.find_by(id: params[:id])
-    @experience.start_date = params[:start_date] || experience.start_date
-    @experience.end_date params[:end_date] || experience.end_date
-    @experience.job_title params[:job_title] || experience.job_title
-    @experience.company_name = params[:company_name] || experience.company_name
-    @experience.details = params[:details] || experience.details
-    @experience.student_id = params[:student_id] || experience.student_id
+    @experience.start_date = params[:start_date] || @experience.start_date
+    @experience.end_date = params[:end_date] || @experience.end_date
+    @experience.job_title = params[:job_title] || @experience.job_title
+    @experience.company_name = params[:company_name] || @experience.company_name
+    @experience.details = params[:details] || @experience.details
+    @experience.student_id = params[:student_id] || @experience.student_id
     @experience.save
     render 'show.json.jbuilder'
   end
@@ -38,6 +38,6 @@ class Api::V1::ExperiencesController < ApplicationController
   def destroy
     @experience = Experience.find_by(id: params[:id])
     @experience.destroy
-    redirect_to 'index.json.jbuilder'
+    render json: {message: "Successfully destroyed, catptain ;)"}
   end
 end

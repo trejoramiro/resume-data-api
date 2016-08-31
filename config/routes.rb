@@ -9,7 +9,10 @@ Rails.application.routes.draw do
       delete '/students/:id' => 'students#destroy'
 
       get '/students/:student_id/education' => 'educations#index'
-      get '/students/:student_id/education/:id' => 'educations#show' 
+      get '/students/:student_id/education/:id' => 'educations#show'
+      post '/students/:student_id/education' => 'educations#create'
+      patch '/students/education/:id' => 'educations#update'
+      delete '/students/education/:id' => 'educations#destroy'
 
       get '/students/:student_id/experiences' => 'experiences#index'
       get '/students/:student_id/experiences/:id' => 'experiences#show'
@@ -22,4 +25,3 @@ Rails.application.routes.draw do
     end
   end
 end
-

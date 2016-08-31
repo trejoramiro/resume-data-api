@@ -27,8 +27,9 @@ class Api::V1::SkillsController < ApplicationController
   def update
     @student = Student.find_by(id: params[:student_id])    
     @skill = Skill.find_by(id: params[:id])
-    @skill.name = params["name"] || @skill.name
-    @skill.student_id = params["student_id"] || @skill.student_id
+    @skill.name = params[:name] || @skill.name
+    @skill.student_id = params[:student_id] || @skill.student_id
+    @skill.save
     render 'show.json.jbuilder'
   end
 

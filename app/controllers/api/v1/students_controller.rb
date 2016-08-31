@@ -42,6 +42,7 @@ class Api::V1::StudentsController < ApplicationController
     @student.resume_url = params[:resume_url] || @student.resume_url
     @student.github_url = params[:github_url] || @student.github_url
     @student.photo = params[:photo] || @student.photo
+    @student.save
     render 'show.json.jbuilder'
   end
 

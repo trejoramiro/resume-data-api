@@ -2,7 +2,6 @@ json.firstName @student.first_name
 json.id @student.id
 json.lastName @student.last_name
 json.email @student.email
-json.password @student.password
 json.phoneNumber @student.phone_number
 json.bio @student.bio
 json.linkedInUrl @student.linked_in_url

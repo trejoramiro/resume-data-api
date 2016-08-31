@@ -3,7 +3,6 @@ json.array! @students do |student|
   json.firstName student.first_name
   json.lastName student.last_name
   json.email student.email
-  json.password student.password
   json.phoneNumber student.phone_number
   json.bio student.bio
   json.linkedInUrl student.linked_in_url

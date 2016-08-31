@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+
+      get '/authenticate' => 'students#authenticate'
+
       get '/' => 'students#index'
       get '/students' => 'students#index'
       post '/students' => 'students#create'

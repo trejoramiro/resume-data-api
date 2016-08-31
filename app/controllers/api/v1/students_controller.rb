@@ -51,4 +51,13 @@ class Api::V1::StudentsController < ApplicationController
     @student.destroy
     render json: {message: "Successfully destroyed, catptain ;)"}
   end
+
+  def authenticate
+    @student = Student.find_by(password: params[:password], email: params[:email])
+    if @student
+      render json: { id: @student.id }
+    else
+      render json: { message: "Invalid email or password" }
+    end
+  end
 end

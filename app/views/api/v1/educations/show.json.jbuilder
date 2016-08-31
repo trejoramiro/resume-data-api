@@ -1,4 +1,4 @@
-json.studentId @education.student.id
+json.studentId @education.student_id
 json.educationId @education.id
 json.startDate @education.start_date
 json.endDate @education.end_date

@@ -20,7 +20,7 @@ class Api::V1::EducationsController < ApplicationController
       details: params[:details],
       student_id: params[:student_id])
     if @education.save
-      render 'create.json.jbuilder'
+      render 'show.json.jbuilder'
     else
       render json: { status: :error, message: 'Error' }.to_json
     end

@@ -13,6 +13,7 @@ json.array! @students do |student|
   json.githubUrl student.github_url
   json.photo student.photo
   json.educations student.educations.each do |education|
+    json.id education.id
     json.startDate education.start_date
     json.endDate education.end_date
     json.degree education.degree
@@ -21,6 +22,7 @@ json.array! @students do |student|
     json.studentId education.student_id
   end
   json.experiences student.experiences.each do |experience|
+    json.id experience.id
     json.startDate experience.start_date
     json.endDate experience.end_date
     json.jobTitle experience.job_title
@@ -29,6 +31,7 @@ json.array! @students do |student|
     json.studentId experience.student_id
   end
   json.skills student.skills.each do |skill|
+    json.id skill.id
     json.name skill.name
     json.studentId skill.student_id
   end

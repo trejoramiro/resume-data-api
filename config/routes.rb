@@ -14,13 +14,14 @@ Rails.application.routes.draw do
       patch '/students/education/:id' => 'educations#update'
       delete '/students/education/:id' => 'educations#destroy'
 
-
       get '/students/:student_id/experiences' => 'experiences#index'
       get '/students/:student_id/experiences/:id' => 'experiences#show'
+      post '/students/:student_id/experiences' => 'experiences#create'
+      patch '/students/:student_id/experiences/:id' => 'experiences#update'
+      delete '/students/:student_id/experiences/:id' => 'experiences#destroy'
 
       get '/students/:student_id/skills' => 'skills#index'
       get '/students/:student_id/skills/:id' => 'skills#show'
     end
   end
 end
-# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
